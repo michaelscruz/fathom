@@ -33,4 +33,8 @@ class LearnerTest < ActiveSupport::TestCase
     refute learner.valid?
     assert learner.errors[:email].present?
   end
+
+  test "a learner should respond to notes with a an AREL collection" do
+    assert learners(:anakin).notes.is_a?(ActiveRecord::Associations::CollectionProxy)
+  end
 end

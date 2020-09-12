@@ -1,0 +1,9 @@
+anakin_on_light_side:
+  learner: anakin
+  title: On the Light Side of the Force
+  body: I want to make a difference in the universe and help people, which is why I joined the Jedi. But my influence is growing too slow.
+
+anakin_on_dark_side:
+  learner: anakin
+  title: On the dark side of the Force
+  body: I know I shouldn't, but I want more. It isn't right. But how else can I help Padme?
