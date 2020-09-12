@@ -1,0 +1,15 @@
+current directory: /Users/michaelcruz/projects/fathom/vendor/ruby/ruby/2.7.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+/Users/michaelcruz/.asdf/installs/ruby/2.7.1/bin/ruby -I /Users/michaelcruz/.asdf/installs/ruby/2.7.1/lib/ruby/2.7.0 -r ./siteconf20200912-52998-7wgbir.rb extconf.rb
+creating Makefile
+
+current directory: /Users/michaelcruz/projects/fathom/vendor/ruby/ruby/2.7.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /Users/michaelcruz/projects/fathom/vendor/ruby/ruby/2.7.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/michaelcruz/projects/fathom/vendor/ruby/ruby/2.7.0/gems/websocket-driver-0.7.3/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20200912-52998-12h8xqy
