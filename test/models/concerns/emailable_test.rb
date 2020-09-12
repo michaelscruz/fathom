@@ -13,12 +13,12 @@ module EmailableTest
       refute emailable.valid?
       assert emailable.errors[:email].present?
     end
-
-    private
-
-      def emailable
-        @emailable ||
-          (raise NotImplementedError, "Test cases implementing #{MODULE_NAME} must define '@emailable' object in test setup")
-      end
   end
+
+  private
+
+    def emailable
+      @emailable ||
+        (raise NotImplementedError, "Test cases implementing #{MODULE_NAME} must define '@emailable' object in test setup")
+    end
 end

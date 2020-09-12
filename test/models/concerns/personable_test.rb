@@ -11,12 +11,12 @@ module PersonableTest
     test "personable should respond to last_name" do
       assert personable.respond_to? :last_name
     end
-
-    private
-
-      def personable
-        @personable ||
-          (raise NotImplementedError, "Test cases implementing #{MODULE_NAME} must define '@personable' object in test setup")
-      end
   end
+
+  private
+
+    def personable
+      @personable ||
+        (raise NotImplementedError, "Test cases implementing #{MODULE_NAME} must define '@personable' object in test setup")
+    end
 end
