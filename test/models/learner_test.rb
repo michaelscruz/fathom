@@ -35,6 +35,8 @@ class LearnerTest < ActiveSupport::TestCase
   end
 
   test "a learner should respond to notes with a an AREL collection" do
-    assert learners(:anakin).notes.is_a?(ActiveRecord::Associations::CollectionProxy)
+    relation = learners(:anakin).notes
+    assert relation.is_a?(ActiveRecord::Associations::CollectionProxy)
+    assert_equal Note, relation.proxy_association.klass
   end
 end
