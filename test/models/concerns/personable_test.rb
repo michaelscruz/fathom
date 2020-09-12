@@ -15,7 +15,8 @@ module PersonableTest
     private
 
       def personable
-        raise NotImplementedError, "Test cases implementing #{MODULE_NAME} must override 'personable' method to return a personable object"
+        @personable ||
+          (raise NotImplementedError, "Test cases implementing #{MODULE_NAME} must define '@personable' object in test setup")
       end
   end
 end

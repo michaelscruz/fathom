@@ -1,8 +1,14 @@
 require 'test_helper'
+require_relative './concerns/emailable_test'
 require_relative './concerns/personable_test'
 
 class LearnerTest < ActiveSupport::TestCase
+  include EmailableTest
   include PersonableTest
+
+  setup do
+    @learner = @emailable = @personable = Learner.new
+  end
 
   test "a learner without a first name should not be valid" do
     learner = Learner.new(last_name: 'Last', email: 'last@only.com')
@@ -27,10 +33,4 @@ class LearnerTest < ActiveSupport::TestCase
     refute learner.valid?
     assert learner.errors[:email].present?
   end
-
-  private
-
-    def personable
-      Learner.new
-    end
 end
