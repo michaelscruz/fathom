@@ -14,4 +14,5 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
 end
 
+require_relative './components/application_component_test_helper'
 require_relative './integration/application_integration_test_helper'

@@ -15,4 +15,16 @@ class DashboardIntegrationTest < ApplicationIntegrationTest
     get root_url
     assert_response :success
   end
+
+  test "index should have header component rendered" do
+  end
+
+  test "index should have a search component rendered" do
+  end
+
+  test "index should have the expected number of section components" do
+  end
+
+  test "index should have add button component rendered" do
+  end
 end
