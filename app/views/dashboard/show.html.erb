@@ -1,1 +1,8 @@
 <% content_for :title, 'Dashboard' %>
+
+<%= render Dashboard::DashboardSummarySectionComponent.new(title: 'entries', count: 374) %>
+<%= render Dashboard::DashboardSummarySectionComponent.new(title: 'authors', count: 34) %>
+<%= render Dashboard::DashboardSummarySectionComponent.new(title: 'sources', count: 56) %>
+<%= render Dashboard::DashboardSummarySectionComponent.new(title: 'themes', count: 120) %>
+<%= render Dashboard::DashboardSummarySectionComponent.new(title: 'characters', count: 23) %>
+<%= render Dashboard::DashboardSummarySectionComponent.new(title: 'shared', count: 4) %>

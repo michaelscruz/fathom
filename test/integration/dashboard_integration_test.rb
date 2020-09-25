@@ -3,7 +3,7 @@ require 'test_helper'
 class DashboardIntegrationTest < ApplicationIntegrationTest
 
   setup do
-    sign_in learners(:anakin)
+    sign_in learners(:jedi)
   end
 
   test "root url should be dashboard" do
@@ -23,6 +23,13 @@ class DashboardIntegrationTest < ApplicationIntegrationTest
   end
 
   test "index should have the expected number of section components" do
+    Dashboard::DashboardSummarySectionComponent.expects(:new).with(title: 'entries', count: 374).returns(mock_component)
+    Dashboard::DashboardSummarySectionComponent.expects(:new).with(title: 'authors', count: 34).returns(mock_component)
+    Dashboard::DashboardSummarySectionComponent.expects(:new).with(title: 'sources', count: 56).returns(mock_component)
+    Dashboard::DashboardSummarySectionComponent.expects(:new).with(title: 'themes', count: 120).returns(mock_component)
+    Dashboard::DashboardSummarySectionComponent.expects(:new).with(title: 'characters', count: 23).returns(mock_component)
+    Dashboard::DashboardSummarySectionComponent.expects(:new).with(title: 'shared', count: 4).returns(mock_component)
+    get root_url
   end
 
   test "index should have add button component rendered" do

@@ -2,9 +2,13 @@ ENV['RAILS_ENV'] ||= 'test'
 require_relative '../config/environment'
 require_relative './test_helpers/associations_test_helper'
 require 'rails/test_help'
+require 'minitest/autorun'
+require 'mocha/minitest'
+require_relative 'test_utils'
 
 class ActiveSupport::TestCase
   include TestHelpers::AssociationsTestHelper
+  include TestUtils
   # Run tests in parallel with specified workers
   parallelize(workers: :number_of_processors)
 

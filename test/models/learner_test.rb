@@ -29,13 +29,13 @@ class LearnerTest < ActiveSupport::TestCase
   end
 
   test "a learner with an email that is already taken should not be valid" do
-    learner = Learner.new(first_name: 'Someone', last_name: 'Invalid', email: learners(:anakin).email)
+    learner = Learner.new(first_name: 'Someone', last_name: 'Invalid', email: learners(:jedi).email)
     refute learner.valid?
     assert learner.errors[:email].present?
   end
 
   test "a learner should respond to notes with a an AREL collection" do
-    relation = learners(:anakin).notes
+    relation = learners(:jedi).notes
     assert_association_of_type Note, relation
   end
 end

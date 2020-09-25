@@ -1,4 +1,14 @@
-anakin:
+padawan:
+  first_name: Ahsoka
+  last_name:  Tano
+  email:      snips@jedi.com
+
+jedi:
   first_name: Anakin
   last_name:  Skywalker
   email:      ilovepadme@jedi.com
+
+master:
+  first_name: Obi Wan
+  last_name:  Kenobi
+  email:      obeskenobes@jedi.com
