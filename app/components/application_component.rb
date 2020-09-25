@@ -1,4 +1,5 @@
 class ApplicationComponent < ViewComponent::Base
+  include ViewComponent::Slotable
 
   private
 

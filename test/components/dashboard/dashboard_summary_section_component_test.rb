@@ -14,6 +14,14 @@ class Dashboard::DashboardSummarySectionComponentTest < ApplicationComponentTest
     assert_selector '[class="section-count"]', text: '374'
   end
 
+  test "component should render the icon slot" do
+    icon_el = '<i class="icon"></i>'
+    render_inline(Dashboard::DashboardSummarySectionComponent.new(title: 'entries', count: 374)) do |section|
+      section.slot(:icon) { icon_el.html_safe }
+    end
+    assert_selector 'i[class="icon"]'
+  end
+
   private
 
     def root_class_name
